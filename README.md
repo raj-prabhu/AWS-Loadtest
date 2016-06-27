@@ -31,5 +31,5 @@ $ python aws-loadtest.py
 - The program will first read the [csv file](https://github.com/raj-prabhu/AWS-Loadtest/blob/master/regions.csv) containing the details about the number of instances to be launched.  
 - It will then start the required number of instances.
 - Next, it will transfer the players from the S3 bucket to the instance and run them.
-- The output of the players (logs) will then be copied to a text file. The text file for each of the instances will be sent back to S3 bucket.
+- The output of the players will then be copied to a text file. The text file (logs) for each of the instances will be sent back to S3 bucket.
 - Once everything is completed, the instances will be terminated automatically.
