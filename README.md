@@ -24,12 +24,12 @@ $ pip install boto
   * Amazon S3 bucket for storing the players (eg. hls player) as well as the logs to be collected
 
 ##Usage
-1. The program can be run by performing:
+- The program can be run by performing:
 ```
 $ python aws-loadtest.py
 ```
-2. The program will first read the [csv file](https://github.com/raj-prabhu/AWS-Loadtest/blob/master/regions.csv) containing the details about the number of instances to be launched.  
-3. It will then start the required number of instances.
-4. Next, it will transfer the players from the S3 bucket to the instance and run them.
-5. The output of the players (logs) will then be copied to a text file. The text file for each of the instances will be sent back to S3 bucket.
-6. Once everything is completed, the instances will be terminated automatically.
+- The program will first read the [csv file](https://github.com/raj-prabhu/AWS-Loadtest/blob/master/regions.csv) containing the details about the number of instances to be launched.  
+- It will then start the required number of instances.
+- Next, it will transfer the players from the S3 bucket to the instance and run them.
+- The output of the players (logs) will then be copied to a text file. The text file for each of the instances will be sent back to S3 bucket.
+- Once everything is completed, the instances will be terminated automatically.
