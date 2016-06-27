@@ -6,7 +6,7 @@ The given [python script](https://github.com/raj-prabhu/AWS-Loadtest/blob/master
 can also be used, but the drawback of these is that they can only be done from your local machine. 
 
 In order to simulate multiple users across various regions of the world, AWS services come in 
-handy. They enable us to launch [instances] (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html) (remote machines)
+handy. They enable us to launch [instances] (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html) (remote machines)h
 in different regions of the world, run the required number of players on the new instances, return back the logs and finally terminate the
 instances.
 
@@ -21,7 +21,7 @@ $ pip install boto
 - [Amazon Web Services] (http://aws.amazon.com/) (AWS) account (One year free trial is available)
   * AWS Security Credentials
   * Key pair for each region
-  * Amazon S3 bucket for storing the players (eg. hls player) as well as the logs to be collected
+  * Amazon S3 bucket for storing the players (eg. HLS Player) as well as the logs to be collected
 
 ##Usage
 - The program can be run by performing:
