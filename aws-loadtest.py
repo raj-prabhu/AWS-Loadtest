@@ -62,6 +62,14 @@ for region in given_regions:
 		# connecting to the required region
 		conn = boto.ec2.connect_to_region(region)
 		# commands to be executed on the command line of an instance  
+# Explanation of data_string:
+# Lines 74-82: Installing awscli on the instance
+# Lines 86-90: AWS Security Credentials 		
+# Line 94: Transferring players from S3 bucket to the instance 
+# Lines 96-98: Copying the output given out after running the players into a text file
+# Line 100: Transferring the logs(text file) to the S3 bucket
+# Lines 104-106: Terminating the instance
+  
 		data_string="""#!/bin/bash
 sudo apt-get -y update
 
@@ -87,7 +95,7 @@ aws s3 cp s3://yourS3bucketname/hello_world.py hello_world.py
 
 chmod +x hello_world.py
 
-./hello_world.py > """+region+"""_"""+str(j+1)+"""_hello_world.txt
+./hello_world.py >> """+region+"""_"""+str(j+1)+"""_hello_world.txt
 
 aws s3 cp /home/ubuntu/"""+region+"""_"""+str(j+1)+"""_hello_world.txt s3://yourS3bucketname
 
@@ -96,7 +104,6 @@ aws s3 cp /home/ubuntu/"""+region+"""_"""+str(j+1)+"""_hello_world.txt s3://your
 EC2_INSTANCE_ID="$(wget -q -O - http://instance-data/latest/meta-data/instance-id)"
 
 aws ec2 terminate-instances --instance-ids $EC2_INSTANCE_ID
-
 
 
 """
