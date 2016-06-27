@@ -1,5 +1,5 @@
 # AWS-Loadtest
->Load testing using Amazon AWS Services
+Load testing using Amazon AWS Services
 
 ##Description
 The given [python script](https://github.com/raj-prabhu/AWS-Loadtest/blob/master/aws-loadtest.py) can be used to test how many concurrent users a server can handle. Load testing tools such as [ab] (https://httpd.apache.org/docs/2.4/programs/ab.html)
