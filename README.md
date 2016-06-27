@@ -24,7 +24,7 @@ $ pip install boto
   * Amazon S3 bucket for storing the players (eg. HLS Player) as well as the logs to be collected
 
 ##Usage
-- The program can be run by performing:
+- Run:
 ```
 $ python aws-loadtest.py
 ```
